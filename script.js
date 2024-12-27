@@ -1,4 +1,4 @@
-const scriptURL = "https://script.google.com/macros/s/AKfycbzJWc2twuUGYddLz15HUiy_7YppxvRaaqF5y0ohWFcwVRapNbDxib-NQ2XXAtk6TX6PdA/exec";
+const scriptURL = "https://script.google.com/macros/s/AKfycbxN3x4g-Ez3BO6n475FKEaJe9kW_a3Hs3m498OwzjxvYZxe0QUshaFkoNvZTg1n7xawMw/exec";
 
 document.getElementById("parking-form").addEventListener("submit", async (e) => {
     e.preventDefault();

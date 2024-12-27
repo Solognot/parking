@@ -1,14 +1,14 @@
-const scriptURL = "https://script.google.com/macros/s/AKfycbwIQ7beQMMr2AU0O9DjxkcxTJu4Jp-ADaLKHsvcJ3hmgC4ymQhTJ9Lc3r9HAlLWM1TZ8A/exec";
+const scriptURL = "https://script.google.com/macros/s/AKfycbzJWc2twuUGYddLz15HUiy_7YppxvRaaqF5y0ohWFcwVRapNbDxib-NQ2XXAtk6TX6PdA/exec";
 
 document.getElementById("parking-form").addEventListener("submit", async (e) => {
     e.preventDefault();
-    
+
     const name = document.getElementById("name").value;
     const action = document.getElementById("action").value;
     const responseDiv = document.getElementById("response");
-    
+
     const data = { name, action };
-    
+
     try {
         const response = await fetch(scriptURL, {
             method: "POST",

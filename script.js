@@ -14,7 +14,7 @@ document.getElementById("parking-form").addEventListener("submit", async (e) => 
             redirect: "follow",
             method: "POST",
             body: JSON.stringify(data),
-            headers: { "Content-Type": "application/json" },
+            headers: { "Content-Type": "text/plain;charset=utf-8" },
         });
         const result = await response.json();
         responseDiv.textContent = result.message;

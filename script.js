@@ -1,4 +1,4 @@
-const scriptURL = "https://script.google.com/macros/s/AKfycbxDnbP1qx8FQuz6DbQTCNH66wbe9b2fQkVUtu1WSytZFFDbN1ZB5Q61JHTcREDmVZt2gA/exec";
+const scriptURL = "https://script.google.com/macros/s/AKfycbzdLjSIO2-ZpQazhdGABdlMI_7KkXykzg7MWnybM2GHqScDJJ-K6MBS2yYypZcqKE7EAQ/exec"
 
 document.getElementById("parking-form").addEventListener("submit", async (e) => {
     e.preventDefault();
@@ -11,6 +11,7 @@ document.getElementById("parking-form").addEventListener("submit", async (e) => 
 
     try {
         const response = await fetch(scriptURL, {
+            redirect: "follow",
             method: "POST",
             body: JSON.stringify(data),
             headers: { "Content-Type": "application/json" },

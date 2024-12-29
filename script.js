@@ -1,4 +1,9 @@
-const scriptURL = "https://script.google.com/macros/s/AKfycbzdLjSIO2-ZpQazhdGABdlMI_7KkXykzg7MWnybM2GHqScDJJ-K6MBS2yYypZcqKE7EAQ/exec"
+const url = window.location.href;
+const urlObj = new URL(url);
+const params = new URLSearchParams(urlObj.search);
+const scriptURL = `https://script.google.com/macros/s/${params.get('q')}/exec`
+
+document.getElementById("doc").innerHTML = `<a href="https://docs.google.com/spreadsheets/d/${params.get('g')}/edit?gid=0#gid=0" target="_blank">DOC</a>`; 
 
 document.getElementById("parking-form").addEventListener("submit", async (e) => {
     e.preventDefault();

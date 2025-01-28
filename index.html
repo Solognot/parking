@@ -5,16 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Parking App</title>
     <script defer src="script.js"></script>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <h1>Parking App</h1>
     <form id="parking-form">
         <input type="text" id="name" placeholder="Enter your name" required />
-        <select id="action">
-            <option value="check-in">Check In</option>
-            <option value="check-out">Check Out</option>
-        </select>
-        <button type="submit">Submit</button>
+        <div class="action-buttons">
+            <button type="button" class="check-in-btn" onclick="handleAction('check-in')">Check In</button>
+            <button type="button" class="check-out-btn" onclick="handleAction('check-out')">Check Out</button>
+        </div>
     </form>
     <div id="response"></div>
 

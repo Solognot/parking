@@ -1,4 +1,4 @@
-/* Mobile-friendly styles */
+/* General styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -11,10 +11,18 @@ body {
     min-height: 100vh;
     background-color: #f8f9fa;
 }
+
 h1 {
     margin-bottom: 20px;
     color: #333;
 }
+
+#duration-display {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Form styles */
 #parking-form {
     display: flex;
     flex-direction: column;
@@ -26,6 +34,7 @@ h1 {
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
+
 #parking-form input {
     width: 100%;
     margin-bottom: 15px;
@@ -34,15 +43,14 @@ h1 {
     border-radius: 4px;
     font-size: 16px;
 }
-#action {
-    display: none;
-}
+
 .action-buttons {
     display: flex;
     justify-content: space-between;
     width: 100%;
     gap: 10px;
 }
+
 .action-buttons button {
     flex: 1;
     padding: 15px;
@@ -52,14 +60,57 @@ h1 {
     color: #fff;
     cursor: pointer;
 }
+
 .check-in-btn {
     background-color: #28a745;
 }
+
 .check-out-btn {
     background-color: #dc3545;
 }
-#response {
-    margin-top: 20px;
+
+/* Publish button styles */
+#publish-btn {
+    width: 100%;
+    padding: 15px;
     font-size: 16px;
-    color: #555;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+}
+
+#publish-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Preview table styles */
+#local-storage-preview {
+    max-height: 400px; /* Approximately for 10 rows */
+    overflow-y: auto;
+    margin-top: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+#local-entries-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#local-entries-table th,
+#local-entries-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+#local-entries-table th {
+    background-color: #f4f4f4;
+}
+
+#local-entries-table tr:nth-child(even) {
+    background-color: #f9f9f9;
 }
